@@ -72,7 +72,11 @@ select ename
 from emp
 where sal>losal and sal<hisal
 );
-
+select GradeId
+from SalGrades s
+left join Employees e on e.Salary between Losal and Hisal
+where EmployeeId is null;
+                        
 --9 correlated query
 /*Find people who earn the highest salary for the city in which they work.*/
 select ename
